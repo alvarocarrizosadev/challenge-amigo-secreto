@@ -2,18 +2,19 @@
 let amigos = [];
 
 function agregarAmigo() {
-    let nombreDeAmigo = document.getElementById('amigo').value.trim(); // Elimina espacios innecesarios
+    // Elimina espacios innecesarios
+    let nombreDeAmigo = document.getElementById('amigo').value.trim(); 
 
     if (nombreDeAmigo === '') {
         alert('Por favor, inserte un nombre.');
-        return; // Evita que el código siga ejecutándose
+        return;
     }
 
     amigos.push(nombreDeAmigo);
     limpiarCaja();
-    console.log(amigos); // Imprime el array actualizado
+    console.log(amigos);
 }
 
 function limpiarCaja() {
-    document.getElementById('amigo').value = ''; // No es necesario asignarlo a una variable
+    document.getElementById('amigo').value = '';
 }
