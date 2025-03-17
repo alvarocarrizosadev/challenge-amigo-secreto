@@ -24,4 +24,23 @@ function agregarAmigo(){
 
     // Limpiar la caja de entrada
     let valorCaja = document.querySelector('#amigo').value = '';
+
+    // Actualización de lista
+    actualizarListaAmigos();
 }
+
+// Función para actualizar lista de amigos
+function actualizarListaAmigos(){
+    const listaAmigos = document.getElementById(listaAmigos);
+    listaAmigos.innerHTML = '';
+
+    // Recorrer la lista de amigos
+    for(let i = 0; i<amigos.length; i++){
+        const li = document.createElement('li');
+        li.textContent = amigos[i];
+        listaAmigos.appendChild(li);
+    }
+}
+
+// Función para seleccionar un amigo aleatorio 
+
